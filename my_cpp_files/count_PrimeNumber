@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+	int c=0, count=0, i, j, min1, max2, b;
+    int x,y;
+		cout << "Enter number one and number two : ";
+    cin >> x >> y;
+    min1 = min(x,y);
+    max2 = max(x,y);
+	for (i=min1; i<max2; i++, c = 0)
+	{
+		for (j=1; j<= i/2; j++)
+		{
+			b = i % j;
+			if (b  == 0)
+			{
+				c++;
+			}
+		}
+		if (c == 1)
+			{
+            count++;
+			}
+	}
+    cout << "there is " << count << " prime numbers between " << min1 << " and " << max2 << endl;
+	return 0;
+}
